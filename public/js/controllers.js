@@ -1,6 +1,6 @@
 (function() {
-
-  angular.module('myApp').controller('AppCtrl', function($scope, $http) {
+  "use strict";
+  this.myApp.controller('AppCtrl', function($scope, $http) {
     return $http({
       method: "GET",
       url: "/api/name"
@@ -11,7 +11,7 @@
     });
   });
 
-  angular.module('myApp').controller('MyCtrl1', function($scope, $http) {
+  this.myApp.controller('MyCtrl1', function($scope, $http) {
     return $http({
       method: "GET",
       url: "/api/name"
@@ -22,7 +22,7 @@
     });
   });
 
-  angular.module('myApp').controller('MyCtrl2', function($scope, $http) {
+  this.myApp.controller('MyCtrl2', function($scope, $http) {
     return $http({
       method: "GET",
       url: "/api/name"
@@ -32,7 +32,5 @@
       return $scope.name = "Error!";
     });
   });
-
-  angular.bootstrap(document, ["myApp"]);
 
 }).call(this);
