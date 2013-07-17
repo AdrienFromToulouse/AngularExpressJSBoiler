@@ -1,21 +1,25 @@
-'use strict';
+(function() {
+  var AppCtrl, MyCtrl1, MyCtrl2;
 
-/* Controllers */
+  AppCtrl = function($scope, $http) {
+    return $http({
+      method: "GET",
+      url: "/api/name"
+    }).success(function(data, status, headers, config) {
+      return $scope.name = data.name;
+    }).error(function(data, status, headers, config) {
+      return $scope.name = "Error!";
+    });
+  };
 
-function AppCtrl($scope, $http) {
-  $http({method: 'GET', url: '/api/name'}).
-  success(function(data, status, headers, config) {
-    $scope.name = data.name;
-  }).
-  error(function(data, status, headers, config) {
-    $scope.name = 'Error!'
-  });
-}
+  MyCtrl1 = function() {};
 
-function MyCtrl1() {}
-MyCtrl1.$inject = [];
+  MyCtrl2 = function() {};
 
+  "use strict";
 
-function MyCtrl2() {
-}
-MyCtrl2.$inject = [];
+  MyCtrl1.$inject = [];
+
+  MyCtrl2.$inject = [];
+
+}).call(this);
