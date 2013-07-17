@@ -1,7 +1,7 @@
 'use strict';
 
 
-@myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives']);
+@myApp = angular.module('myApp', []);
 
 // Declare app level module which depends on filters, and services
 @myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
