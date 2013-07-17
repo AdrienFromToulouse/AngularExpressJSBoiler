@@ -1,6 +1,8 @@
 (function() {
   "use strict";
-  angular.module("myApp", ["myApp.filters", "myApp.services", "myApp.directives"]).config([
+  this.myApp = angular.module("myApp", []);
+
+  this.myApp.config([
     "$routeProvider", "$locationProvider", function($routeProvider, $locationProvider) {
       $routeProvider.when("/view1", {
         templateUrl: "partial/1",
