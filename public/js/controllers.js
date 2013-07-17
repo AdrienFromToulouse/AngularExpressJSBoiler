@@ -1,21 +1,14 @@
-'use strict';
+(function() {
 
-/* Controllers */
-
-function AppCtrl($scope, $http) {
-  $http({method: 'GET', url: '/api/name'}).
-  success(function(data, status, headers, config) {
-    $scope.name = data.name;
-  }).
-  error(function(data, status, headers, config) {
-    $scope.name = 'Error!'
+  angular.module('myApp').controller('AppCtrl', function($scope, $http) {
+    return $http({
+      method: "GET",
+      url: "/api/name"
+    }).success(function(data, status, headers, config) {
+      return $scope.name = data.name;
+    }).error(function(data, status, headers, config) {
+      return $scope.name = "Error!";
+    });
   });
-}
 
-function MyCtrl1() {}
-MyCtrl1.$inject = [];
-
-
-function MyCtrl2() {
-}
-MyCtrl2.$inject = [];
+}).call(this);

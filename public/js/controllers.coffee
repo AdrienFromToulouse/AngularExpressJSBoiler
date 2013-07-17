@@ -1,5 +1,4 @@
- 
-AppCtrl = ($scope, $http) ->
+angular.module('myApp').controller 'AppCtrl', ($scope, $http) ->
   $http(
     method: "GET"
     url: "/api/name"
@@ -8,8 +7,4 @@ AppCtrl = ($scope, $http) ->
   ).error (data, status, headers, config) ->
     $scope.name = "Error!"
 
-MyCtrl1 = ->
-MyCtrl2 = ->
-"use strict"
-MyCtrl1.$inject = []
-MyCtrl2.$inject = []
+  
