@@ -1,6 +1,6 @@
 "use strict"
 
-window.AppCtrl = ($scope, $http) ->
+angular.module('myApp').controller 'AppCtrl', ($scope, $http) ->
   $http(
     method: "GET"
     url: "/api/name"
@@ -9,7 +9,7 @@ window.AppCtrl = ($scope, $http) ->
   ).error (data, status, headers, config) ->
     $scope.name = "Error!"
 
-window.MyCtrl1 = ($scope, $http) ->
+angular.module('myApp').controller 'MyCtrl1', ($scope, $http) ->
   $http(
     method: "GET"
     url: "/api/name"
@@ -18,7 +18,7 @@ window.MyCtrl1 = ($scope, $http) ->
   ).error (data, status, headers, config) ->
     $scope.name = "Error!"
 
-window.MyCtr2 = ($scope, $http) ->
+angular.module('myApp').controller 'MyCtrl2', ($scope, $http) ->
   $http(
     method: "GET"
     url: "/api/name"
