@@ -12,5 +12,6 @@ angular.module('myApp').controller 'AppCtrl', ($scope, $http) ->
 angular.module('myApp').controller 'MyCtrl1', ($scope, $http) ->
     $scope.view1 = "VIEW1"
 
+
 angular.module('myApp').controller 'MyCtrl2', ($scope, $http) ->
     $scope.view2 = "VIEW2"
