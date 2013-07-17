@@ -25,4 +25,5 @@ angular.module('myApp').controller 'MyCtrl2', ($scope, $http) ->
   ).error (data, status, headers, config) ->
     $scope.name = "Error!"
 
-  
+    
+angular.bootstrap document, ["myapp"]
