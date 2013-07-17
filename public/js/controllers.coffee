@@ -1,6 +1,6 @@
 "use strict"
 
-@myApp.controller 'AppCtrl', ($scope, $http) ->
+window.AppCtrl = ($scope, $http) ->
   $http(
     method: "GET"
     url: "/api/name"
@@ -9,7 +9,7 @@
   ).error (data, status, headers, config) ->
     $scope.name = "Error!"
 
-@myApp.controller 'MyCtrl1', ($scope, $http) ->
+window.MyCtrl1 = ($scope, $http) ->
   $http(
     method: "GET"
     url: "/api/name"
@@ -18,7 +18,7 @@
   ).error (data, status, headers, config) ->
     $scope.name = "Error!"
 
-@myApp.controller 'MyCtr2', ($scope, $http) ->
+window.MyCtr2 = ($scope, $http) ->
   $http(
     method: "GET"
     url: "/api/name"

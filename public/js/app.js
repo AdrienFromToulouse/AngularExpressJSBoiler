@@ -19,6 +19,4 @@
     }
   ]);
 
-  angular.bootstrap(document, ["myApp"]);
-
 }).call(this);

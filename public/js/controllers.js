@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  this.myApp.controller('AppCtrl', function($scope, $http) {
+  window.AppCtrl = function($scope, $http) {
     return $http({
       method: "GET",
       url: "/api/name"
@@ -9,9 +9,9 @@
     }).error(function(data, status, headers, config) {
       return $scope.name = "Error!";
     });
-  });
+  };
 
-  this.myApp.controller('MyCtrl1', function($scope, $http) {
+  window.MyCtrl1 = function($scope, $http) {
     return $http({
       method: "GET",
       url: "/api/name"
@@ -20,9 +20,9 @@
     }).error(function(data, status, headers, config) {
       return $scope.name = "Error!";
     });
-  });
+  };
 
-  this.myApp.controller('MyCtr2', function($scope, $http) {
+  window.MyCtr2 = function($scope, $http) {
     return $http({
       method: "GET",
       url: "/api/name"
@@ -31,6 +31,6 @@
     }).error(function(data, status, headers, config) {
       return $scope.name = "Error!";
     });
-  });
+  };
 
 }).call(this);
