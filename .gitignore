@@ -1,3 +1,4 @@
 /public/js/**.js
 /public/.sass-cache/*
 /public/css/*
+/node_modules
