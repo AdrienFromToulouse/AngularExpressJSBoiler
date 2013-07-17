@@ -33,6 +33,6 @@
     });
   });
 
-  angular.bootstrap(document, ["myapp"]);
+  angular.bootstrap(document, ["myApp"]);
 
 }).call(this);
