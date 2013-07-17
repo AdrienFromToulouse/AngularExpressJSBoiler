@@ -1,6 +1,6 @@
 (function() {
-  "use strict";
-  this.myApp.controller('AppCtrl', function($scope, $http) {
+
+  angular.module('myApp').controller('AppCtrl', function($scope, $http) {
     return $http({
       method: "GET",
       url: "/api/name"
@@ -11,7 +11,7 @@
     });
   });
 
-  this.myApp.controller('MyCtrl1', function($scope, $http) {
+  angular.module('myApp').controller('MyCtrl1', function($scope, $http) {
     return $http({
       method: "GET",
       url: "/api/name"
@@ -22,7 +22,7 @@
     });
   });
 
-  this.myApp.controller('MyCtrl2', function($scope, $http) {
+  angular.module('myApp').controller('MyCtr2', function($scope, $http) {
     return $http({
       method: "GET",
       url: "/api/name"
