@@ -28,7 +28,9 @@
       url: "/api/name"
     }).success(function(data, status, headers, config) {
       return $scope.name = data.name;
-    }).error(function(data, status, headers, config) {});
+    }).error(function(data, status, headers, config) {
+      return $scope.name = "Error!";
+    });
   });
 
 }).call(this);
