@@ -23,4 +23,4 @@ angular.module('myApp').controller 'MyCtr2', ($scope, $http) ->
   ).success((data, status, headers, config) ->
     $scope.name = data.name
   ).error (data, status, headers, config) ->
-    $scope.name = "Error!"
+#     $scope.name = "Error!"
