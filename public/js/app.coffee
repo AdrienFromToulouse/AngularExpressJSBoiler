@@ -14,3 +14,5 @@
   $routeProvider.otherwise redirectTo: "/view1"
   $locationProvider.html5Mode true
 ]
+
+angular.bootstrap document, ["myApp"]
