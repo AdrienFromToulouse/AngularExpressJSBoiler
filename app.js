@@ -4,14 +4,17 @@
  */
 
 var express = require('express'),
-  routes = require('./routes'),
-  api = require('./routes/api');
+routes = require('./routes'),
+http = require('http'),
+path = require('path'),
+api = require('./routes/api');
 
 var app = module.exports = express();
 
 // Configuration
 
 app.configure(function(){
+  app.set('port', process.env.PORT || 4300);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.bodyParser());
@@ -41,7 +44,6 @@ app.get('/api/name', api.name);
 app.get('*', routes.index);
 
 // Start server
-
-app.listen(3000, function(){
-  console.log("Server started");
+var server = http.createServer(app).listen(app.get('port'), function () {
+  console.log("Express server listening on port " + app.get('port'));
 });
